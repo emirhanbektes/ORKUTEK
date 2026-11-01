@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="tr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ORKÜTEK — Kırsalın sinyali, geleceğin kodu</title>
+<meta name="description" content="Orhan İli Kültür, Teknoloji, Yardımlaşma ve Dayanışma Derneği (ORKÜTEK): Orhaneli'nin çocukları ve gençleriyle kırsal problemleri teknolojiye dönüştüren, doğa + teknoloji + eğitim + dayanışma merkezi.">
+<meta name="theme-color" content="#f6f1e4">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="ORKÜTEK — Kırsalın sinyali, geleceğin kodu">
+<meta property="og:description" content="Orhaneli'de çocuklara teknoloji eğitimi, çiftçiye sensör ve mobil çözümler, gençlere Ar-Ge. Doğa · Teknoloji · Eğitim · Dayanışma.">
+<!-- Yayınladıktan sonra aşağıdaki adresi kendi site adresinizle (https://kullanici.github.io/repo/assets/og.png) değiştirin -->
+<meta property="og:image" content="assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.className="js"</script>
+</head>
+<body>
+<a class="skip" href="#toprak">İçeriğe geç</a>
+<div class="topbar" aria-hidden="true"><i id="progress"></i></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="ORKÜTEK ana sayfa">
+    <img src="assets/logo.webp" alt="" width="34" height="31">
+    <span>ORKÜTEK<small>ORHANELİ · BURSA</small></span>
+  </a>
+  <ul id="menu">
+    <li><a href="#toprak">Toprak</a></li>
+    <li><a href="#sinyal">Sinyal</a></li>
+    <li><a href="#cadir">Çadır</a></li>
+    <li><a href="#nesil">Nesil</a></li>
+    <li><a href="#yol">Yol</a></li>
+    <li><a href="#siz">Siz</a></li>
+  </ul>
+  <a class="btn btn-sun" href="#siz">Destek Ol <span class="arr">→</span></a>
+  <button class="burger" id="burger" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="menu"><i></i></button>
+</header>
+
+<!-- ============ SINYAL RAIL ============ -->
+<nav class="rail" id="rail" aria-label="Sayfa istasyonları">
+  <i class="rail-fill" id="railFill"></i>
+  <a href="#toprak" data-st="toprak"><span>01 Toprak</span></a>
+  <a href="#sinyal" data-st="sinyal"><span>02 Sinyal</span></a>
+  <a href="#cadir" data-st="cadir"><span>03 Çadır</span></a>
+  <a href="#nesil" data-st="nesil"><span>04 Nesil</span></a>
+  <a href="#yol" data-st="yol"><span>05 Yol</span></a>
+  <a href="#siz" data-st="siz"><span>06 Siz</span></a>
+</nav>
+
+<main id="top">
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="h1">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <div>
+      <div class="pill"><b></b> Orhaneli · Bursa · Kuruluş aşamasında</div>
+      <h1 id="h1">
+        <span class="w"><span style="--i:0">Kırsalın</span></span>
+        <span class="w"><span style="--i:1">sinyali,</span></span><br>
+        <span class="w"><span style="--i:2">geleceğin</span></span>
+        <span class="w"><span class="g" style="--i:3">kodu.</span></span>
+      </h1>
+      <p class="lead">Orhaneli'nin çocukları ve gençleriyle kırsal yaşamın problemlerini teknolojiye dönüştürüyoruz — ürettiğimiz teknolojiyi de yine Orhaneli'deki çiftçiye, aileye, öğrenciye ve yerel ekonomiye geri kazandırıyoruz.</p>
+      <div class="term" id="term" aria-label="Terminal animasyonu" role="img"><span class="l"><span class="p">$</span> <span id="termLine"></span><i class="caret"></i></span></div>
+      <div class="cta">
+        <a class="btn btn-sun" href="#siz">Bu işin parçası ol <span class="arr">→</span></a>
+        <a class="btn btn-line" href="#toprak">Yolculuğu izle ↓</a>
+      </div>
+    </div>
+    <div class="orb-wrap" aria-hidden="false">
+      <div class="orb"><img src="assets/logo.webp" alt="ORKÜTEK logosu: dağlar, göl, Yörük çadırı, sensör direği ve traktör; altında Doğa, Teknoloji, Eğitim, Dayanışma" ></div>
+      <div class="orbit" aria-hidden="true">
+        <div class="slot" style="--a:0deg"><div class="counter"><span class="chipn" style="--a:0deg;--c:#9ad35a">ESP32</span></div></div>
+        <div class="slot" style="--a:72deg"><div class="counter"><span class="chipn" style="--a:72deg;--c:#febd36">LoRaWAN</span></div></div>
+        <div class="slot" style="--a:144deg"><div class="counter"><span class="chipn" style="--a:144deg;--c:#6fb7ff">GIS</span></div></div>
+        <div class="slot" style="--a:216deg"><div class="counter"><span class="chipn" style="--a:216deg;--c:#7fe0d6">Python</span></div></div>
+        <div class="slot" style="--a:288deg"><div class="counter"><span class="chipn" style="--a:288deg;--c:#ffb38a">Scratch</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">kaydır</div>
+</section>
+
+<div class="ticker-wrap" aria-hidden="true"><div class="ticker">
+  <div class="tr" id="tick"></div>
+</div></div>
+
+<!-- ============ 01 TOPRAK ============ -->
+<section id="toprak" data-st="toprak" aria-labelledby="t-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">01 / Toprak</div>
+      <h2 id="t-h">Her şey <em>bir problemle</em> başlar.</h2>
+    </div>
+    <p class="manifesto" id="manifesto">Kırsal yaşamın problemlerini, <span class="hl">Orhaneli'nin çocukları ve gençleriyle birlikte</span> teknolojiye dönüştüren; ürettiği teknolojiyi yine Orhaneli'de çiftçiye, aileye, öğrenciye ve yerel ekonomiye geri kazandıran bir merkez.</p>
+
+    <div class="bridge">
+      <article class="bcard rv" data-n="1" style="--d:0">
+        <span class="tag">Kopuk hat 1</span>
+        <h3>Çocuk ↔ Teknoloji</h3>
+        <p>Kırsalda yaşayan çocukların kodlama, elektronik ve yapay zekâya erişimi sınırlı.</p>
+        <div class="pair"><b>Kırsal Kodlama</b><i></i><b>Genç Maker</b></div>
+      </article>
+      <article class="bcard rv" data-n="2" style="--d:1">
+        <span class="tag">Kopuk hat 2</span>
+        <h3>Üretici ↔ Dijital</h3>
+        <p>Sulama, don, toprak nemi, hayvan takibi… Sahadaki gerçek problemler verinin dışında kalıyor.</p>
+        <div class="pair"><b>Sensör</b><i></i><b>Mobil bildirim</b></div>
+      </article>
+      <article class="bcard rv" data-n="3" style="--d:2">
+        <span class="tag">Kopuk hat 3</span>
+        <h3>Turizm ↔ Öğrenme</h3>
+        <p>Doğal Yaşam Merkezi'ne gelen aileler için anlamlı bir hafta sonu programı yok.</p>
+        <div class="pair"><b>Bungalov</b><i></i><b>Aile atölyesi</b></div>
+      </article>
+    </div>
+
+    <div class="pillars rv" id="pillars" role="tablist" aria-label="Dört değerimiz">
+      <button class="pillar active" role="tab" aria-selected="true" style="--bg:linear-gradient(160deg,#4a9d3b,#1d6b24)">
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 21V9M12 9c0-3 2-5 6-5 0 4-2 6-6 5ZM12 13c0-2.5-1.8-4-5-4 0 3.5 1.8 5 5 4Z"/></svg></span>
+        <h3>Doğa</h3><p>Orhaneli Doğal Yaşam Merkezi'nde, bir Yörük çadırının gölgesinde; bölgenin kültürel kimliğini koruyarak çağdaş bir eğitim alanı kuruyoruz.</p>
+      </button>
+      <button class="pillar" role="tab" aria-selected="false" style="--bg:linear-gradient(160deg,#2f80c8,#1b4f94)">
+        <span class="ico"><svg viewBox="0 0 24 24"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4"/></svg></span>
+        <h3>Teknoloji</h3><p>ESP32, Raspberry Pi, LoRaWAN, GIS, yapay zekâ ve veri bilimi: sahada çalışan, ölçülebilir, çoğaltılabilir çözümler.</p>
+      </button>
+      <button class="pillar" role="tab" aria-selected="false" style="--bg:linear-gradient(160deg,#f6a81c,#d9700a)">
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 5.5C5.5 4 8.5 4 12 6c3.5-2 6.5-2 9-.5V19c-2.5-1.5-5.5-1.5-9 .5-3.5-2-6.5-2-9-.5V5.5ZM12 6v13.5"/></svg></span>
+        <h3>Eğitim</h3><p>Ortaokuldan meslek lisesine, öğretmenlerden üreticilere: kodlamadan prototipe, proje yarışmalarından saha uygulamasına.</p>
+      </button>
+      <button class="pillar" role="tab" aria-selected="false" style="--bg:linear-gradient(160deg,#1f8a8a,#14606a)">
+        <span class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><circle cx="5.5" cy="10" r="2.2"/><circle cx="18.5" cy="10" r="2.2"/><path d="M6.5 19c0-3 2.5-5 5.5-5s5.5 2 5.5 5M2.5 17c0-2 1.5-3.5 3.5-3.5M21.5 17c0-2-1.5-3.5-3.5-3.5"/></svg></span>
+        <h3>Dayanışma</h3><p>Belediye, okul, üniversite, üretici, yerel işletme ve hemşehri ağı: herkesin bir görevi, herkesin bir payı var.</p>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 SİNYAL ============ -->
+<section id="sinyal" class="dark" data-st="sinyal" aria-labelledby="s-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">02 / Sinyal</div>
+      <h2 id="s-h">Tarlayı <em>sen sula.</em></h2>
+      <p class="lead">Çiftçi odaklı teknoloji platformumuzun mantığını 30 saniyede deneyin: parsellere sensör yerleştirin, telefona düşen uyarıyı görün, doğru zamanda sulayın.</p>
+    </div>
+
+    <div class="sim rv">
+      <div class="field-card">
+        <div class="fc-head"><span id="nodeCount">Sensör düğümü: 0 / 10</span><span class="badge">Simülasyon · gerçek veri değildir</span></div>
+        <div class="field" id="field" role="group" aria-label="Tarla parselleri"></div>
+        <p class="sim-hint"><span>👆</span><span><b>Boş parsele tıkla</b> → sensör yerleştir. <b>Sensörlü parsele tıkla</b> → sula. Sensörsüz parsellerin neminden haberin olmaz; sen fark edene kadar kurur.</span></p>
+        <div class="meters">
+          <div class="meter"><small>Bağlı düğüm</small><strong id="mNodes">0</strong><div class="bar"><i id="bNodes"></i></div></div>
+          <div class="meter"><small>Ort. nem (ölçülen)</small><strong id="mMoist">—</strong><div class="bar"><i id="bMoist"></i></div></div>
+          <div class="meter"><small>Verim endeksi</small><strong id="mYield">100%</strong><div class="bar"><i id="bYield"></i></div></div>
+        </div>
+      </div>
+
+      <div class="phone" aria-label="Çiftçi mobil uygulaması örneği">
+        <div class="screen">
+          <div class="app-h"><img src="assets/favicon.png" alt=""><div>ORKÜTEK Çiftçi<small>PİLOT · ORHANELİ</small></div></div>
+          <div class="spark"><small><span>Hava sıcaklığı</span><span id="tNow">—</span></small>
+            <svg viewBox="0 0 200 64" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="sg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#febd36" stop-opacity=".5"/><stop offset="1" stop-color="#febd36" stop-opacity="0"/></linearGradient></defs><path id="sparkArea" fill="url(#sg)"/><path id="sparkLine" fill="none" stroke="#ee8a0b" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          </div>
+          <ul class="feed" id="feed" aria-live="polite">
+            <li class="info"><i></i><div>Hoş geldin! İlk sensörünü yerleştirince veriler burada akacak.<time>şimdi</time></div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipe rv">
+      <h3>Gerçek sistem de böyle kurulur — 7 adımda pilottan ölçeğe</h3>
+      <ol>
+        <li><b>Problem topla</b>Sulama, don, nem, hayvan takibi, zararlı</li>
+        <li><b>Pilot seç</b>3–5 üretici ile sahada doğrula</li>
+        <li><b>Sensör</b>ESP32 / Raspberry Pi / LoRaWAN prototip</li>
+        <li><b>Veri</b>Veri tabanı + API + gösterge paneli</li>
+        <li><b>Mobil</b>Alarm, bildirim, basit grafikler</li>
+        <li><b>6 ay pilot</b>Maliyet / fayda raporu</li>
+        <li><b>Ölçekle</b>Kooperatif, belediye, işletme</li>
+      </ol>
+      <div class="principle"><strong>Prensibimiz:</strong> Üreticiye ilk aşamada pahalı bir ürün satmıyoruz — önce sahadaki faydayı kanıtlıyoruz. Süreklilik kazanan servisler daha sonra ayrı bir iktisadi işletme üzerinden ücretlendirilir.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 ÇADIR ============ -->
+<section id="cadir" data-st="cadir" aria-labelledby="c-h">
+  <div class="wrap">
+    <div class="cadir-intro rv">
+      <div>
+        <div class="kicker">03 / Çadır</div>
+        <h2 id="c-h">Yörük çadırı: <em>kırsal inovasyon laboratuvarı</em></h2>
+      </div>
+      <p>Çadır, klasik bir sınıf değil. Orhaneli'nin doğal ve kültürel kimliğini teknolojiyle buluşturan küçük ölçekli bir laboratuvar: içeride lehim kokusu, dışarıda orman, göl ve tarla.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="progs rv" id="progs" tabindex="0" aria-label="Programlar (yatay kaydırılır)">
+      <article class="prog" style="--c:#4a9d3b"><span class="no">01</span><h3>Kırsal Kodlama</h3><span class="who">Ortaokul</span><p>Scratch, micro:bit / ESP32, sensör. İlk satır kodun ilk ışığı yaktığı yer.</p><span class="model">Ücretsiz / hibe</span></article>
+      <article class="prog" style="--c:#2f80c8"><span class="no">02</span><h3>Genç Maker</h3><span class="who">Lise</span><p>Arduino, Raspberry Pi, IoT. Fikirden çalışan prototipe.</p><span class="model">Ücretsiz + sponsor</span></article>
+      <article class="prog" style="--c:#c9751a"><span class="no">03</span><h3>Teknolojiyle Tarım</h3><span class="who">Çiftçiler</span><p>Nem, sulama, meteoroloji ve veri: tarlanın dilini ölçerek öğrenmek.</p><span class="model">Pilot / abonelik</span></article>
+      <article class="prog" style="--c:#d1491f"><span class="no">04</span><h3>Aile Teknoloji Hafta Sonu</h3><span class="who">Bungalov misafirleri</span><p>2–4 saatlik çocuk atölyesi. Doğa tatili, teknoloji hatırasıyla taçlanır.</p><span class="model">Ücretli</span></article>
+      <article class="prog" style="--c:#1f8a8a"><span class="no">05</span><h3>Meslek Lisesi Ar-Ge</h3><span class="who">Lise öğrencileri</span><p>TÜBİTAK, yarışma, prototip. Okulla yazılı işbirliği protokolü.</p><span class="model">Okul protokolü</span></article>
+      <article class="prog" style="--c:#7a54c9"><span class="no">06</span><h3>Öğretmen Mentorluğu</h3><span class="who">Öğretmenler</span><p>IoT, GIS ve proje yazımı: bilgiyi çoğaltan çarpan etkisi.</p><span class="model">Paydaş destekli</span></article>
+      <article class="prog" style="--c:#2f7a3a"><span class="no">07</span><h3>Kırsal Veri Günleri</h3><span class="who">Üretici + gençler</span><p>Harita, ölçüm, saha verisi. Köyün haritasını birlikte çiziyoruz.</p><span class="model">Ücretsiz / hibe</span></article>
+    </div>
+    <div class="progs-tip">← sürükle veya kaydır →</div>
+
+    <div class="lab">
+      <div class="rv">
+        <div class="kicker">Çadırın içi</div>
+        <h3>Girin, bir bakın.</h3>
+        <p class="muted" style="margin-top:12px">20–30 kişilik bir eğitim alanı; ilk günden güvenlik, ilk yardım ve kilitli dolap dâhil. İlk yatırım, talebi doğruladıkça büyür.</p>
+      </div>
+      <div class="shell rv" style="--d:1">
+        <div class="bar"><i></i><i></i><i></i></div>
+        <div class="cmd">$ ls -la /cadir</div>
+        <ul>
+          <li><b>kodlama/</b><span>10–15 bilgisayar · Scratch, Python, web</span></li>
+          <li><b>elektronik/</b><span>Arduino, ESP32, Raspberry Pi, sensörler</span></li>
+          <li><b>tarim-tekno/</b><span>toprak nemi, sıcaklık, hava, sulama</span></li>
+          <li><b>mobil-uygulama/</b><span>çiftçi bildirimleri, veri görüntüleme</span></li>
+          <li><b>gis-harita/</b><span>QGIS, GPS/GNSS, drone, veri görselleştirme</span></li>
+          <li><b>prototipleme/</b><span>3D yazıcı, lehimleme, ölçüm</span></li>
+          <li><b>sunum-alani/</b><span>20–30 kişilik eğitim · ekran/projeksiyon</span></li>
+          <li><b>guvenlik/</b><span>ilk yardım, yangın, kilitli dolap</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 NESİL ============ -->
+<section id="nesil" class="forest" data-st="nesil" aria-labelledby="n-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">04 / Nesil</div>
+      <h2 id="n-h">İlk yılın <em>söz verdiğimiz</em> rakamları</h2>
+    </div>
+    <div class="stats rv">
+      <div class="stat"><div class="n"><span data-count="120">0</span><sup>+</sup></div><p>atölye öğrencisi</p></div>
+      <div class="stat"><div class="n"><span data-count="500">0</span><sup>+</sup></div><p>toplam eğitim saati</p></div>
+      <div class="stat"><div class="n"><span data-count="15">0</span><sup>+</sup></div><p>tamamlanan öğrenci projesi</p></div>
+      <div class="stat"><div class="n"><span data-count="10">0</span><sup>+</sup></div><p>saha sensör prototipi</p></div>
+      <div class="stat"><div class="n"><span data-count="10">0</span><sup>+</sup></div><p>pilot üretici</p></div>
+      <div class="stat"><div class="n"><span data-count="20">0</span><sup>+</sup></div><p>aile / turizm etkinliği</p></div>
+      <div class="stat"><div class="n"><span data-count="5">0</span><sup>+</sup></div><p>kurumsal sponsor ve paydaş</p></div>
+      <div class="stat"><div class="n"><span data-count="1">0</span></div><p>açık yıllık faaliyet ve etki raporu</p></div>
+    </div>
+    <p class="stats-note">* 12 aylık uygulama planındaki hedeflerdir; gerçekleşenleri yıl sonunda raporlayacağız.</p>
+
+    <div class="safe">
+      <div class="rv">
+        <div class="kicker">Çocuk güvenliği</div>
+        <h3>Önce güvenlik, sonra heyecan.</h3>
+        <p style="margin-top:14px;color:#b5d3bd">Çocuklarla çalışan bir kuruluşun en önemli sözü budur. Bunlar, atölye açılmadan önce yazıya dökeceğimiz kurallardır.</p>
+      </div>
+      <ul class="rv" style="--d:1">
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7"/></svg>Her kayıtta veli/vasi onayı ve acil iletişim bilgisi</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7"/></svg>Fotoğraf ve video için ayrı, açık izin süreci</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7"/></svg>Lehim, 3D yazıcı ve kesici aletlerde yaşa uygun güvenlik prosedürü</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7"/></svg>Her etkinlikte sorumlu eğitmen/mentor ve yoklama</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7"/></svg>Kişisel veriler yalnızca amaçla sınırlı toplanır, erişim yetkileri belirlenir</li>
+        <li><svg viewBox="0 0 24 24"><path d="M5 12.5 10 17.5 19 7"/></svg>Gönüllüler için davranış kuralları ve güvenli iletişim prosedürü</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 YOL ============ -->
+<section id="yol" data-st="yol" aria-labelledby="y-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">05 / Yol</div>
+      <h2 id="y-h">12 ayda <em>çadırdan sahaya.</em></h2>
+    </div>
+
+    <div class="road" id="road">
+      <i class="road-fill" id="roadFill"></i><i class="road-dot" id="roadDot"></i>
+      <article class="q rv" style="--c:#4a9d3b">
+        <div class="qh">Ay 1–3</div><h3>Kur</h3>
+        <ol>
+          <li><b>AY 1</b><span>Dernek kuruluşu + belediye görüşmesi → tüzel kişilik, protokol taslağı</span></li>
+          <li><b>AY 2</b><span>Çadır/alan kurulumu → atölye fiziksel olarak hazır</span></li>
+          <li><b>AY 3</b><span>İlk öğrenci grubu → 20–30 öğrenci</span></li>
+        </ol>
+      </article>
+      <article class="q rv" style="--c:#2f80c8;--d:1">
+        <div class="qh">Ay 4–6</div><h3>Üret</h3>
+        <ol>
+          <li><b>AY 4</b><span>Meslek lisesi protokolü → 2 proje takımı</span></li>
+          <li><b>AY 5</b><span>İlk çiftçi saha analizi → 3 pilot üretici</span></li>
+          <li><b>AY 6</b><span>Sensör MVP → ilk çalışan cihaz</span></li>
+        </ol>
+      </article>
+      <article class="q rv" style="--c:#ee8a0b;--d:2">
+        <div class="qh">Ay 7–9</div><h3>Buluştur</h3>
+        <ol>
+          <li><b>AY 7</b><span>Mobil/web panel → veri görüntüleme</span></li>
+          <li><b>AY 8</b><span>Bungalov hafta sonu programı → turizm entegrasyonu</span></li>
+          <li><b>AY 9</b><span>Proje/hibe başvuruları → en az 2 başvuru</span></li>
+        </ol>
+      </article>
+      <article class="q rv" style="--c:#1f8a8a;--d:3">
+        <div class="qh">Ay 10–12</div><h3>Ölç</h3>
+        <ol>
+          <li><b>AY 10</b><span>Pilot sonuç değerlendirme → etki raporu</span></li>
+          <li><b>AY 11</b><span>Sponsor / iktisadi işletme planı → gelir sistemi</span></li>
+          <li><b>AY 12</b><span>Demo Day / Teknoloji Şenliği → yıllık rapor + yeni dönem planı</span></li>
+        </ol>
+      </article>
+    </div>
+
+    <div class="eco">
+      <div class="rv">
+        <div class="kicker">Bölgesel ekosistem</div>
+        <h3>Bir atölye değil, <em style="font-style:normal;color:var(--forest)">bir ağ.</em></h3>
+        <p class="muted">Beş bileşen birbirini besler: eğitim, kuluçka, üretim, iş ağı ve bölgesel projeler. Bir bileşene dokunun.</p>
+        <div class="eco-detail" id="ecoDetail" aria-live="polite"></div>
+      </div>
+      <div class="hub rv" id="hub" style="--d:1">
+        <svg viewBox="0 0 100 100" aria-hidden="true">
+          <line x1="50" y1="50" x2="50" y2="14"/><line x1="50" y1="50" x2="86" y2="38"/><line x1="50" y1="50" x2="72" y2="81"/><line x1="50" y1="50" x2="28" y2="81"/><line x1="50" y1="50" x2="14" y2="38"/>
+        </svg>
+        <div class="core">ORKÜ<br>TEK</div>
+        <button class="hn on" style="left:50%;top:14%;--c:#4a9d3b" data-e="0">Akademi</button>
+        <button class="hn" style="left:86%;top:38%;--c:#2f80c8" data-e="1">Kuluçka</button>
+        <button class="hn" style="left:72%;top:81%;--c:#c9751a" data-e="2">Atölye</button>
+        <button class="hn" style="left:28%;top:81%;--c:#1f8a8a" data-e="3">İş &amp; Yatırım Ağı</button>
+        <button class="hn" style="left:14%;top:38%;--c:#7a54c9" data-e="4">Bölgesel Projeler</button>
+      </div>
+    </div>
+
+    <div class="vis rv">
+      <div class="kicker">3 yıllık görüş</div>
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-t="0">1. yıl · Orhaneli pilotu</button>
+        <button role="tab" aria-selected="false" data-t="1">2. yıl · Bölgesel ortaklık</button>
+        <button role="tab" aria-selected="false" data-t="2">3. yıl · Ölçeklenebilir merkez</button>
+      </div>
+      <div class="tabpanel on" data-p="0"><div><h4>Önce Orhaneli'de kanıtla</h4><p>Dernek yapısı, belediye protokolü, Yörük çadırı/uygun alan, ilk eğitimler ve ilk sensör pilotu.</p></div><div class="ok">▸ 120+ öğrenci<br>▸ 5+ paydaş/sponsor<br>▸ 5 prototip<br>▸ 2–3 pilot / ilk müşteri görüşmesi</div></div>
+      <div class="tabpanel" data-p="1"><div><h4>Komşulara uzan</h4><p>Bursa ve Sakarya'daki okul, üniversite, şirket, kooperatif ve belediyelerle ortak programlar.</p></div><div class="ok">▸ En az 2 düzenli kuluçka dönemi<br>▸ Tekrar eden kurumsal hizmet geliri<br>▸ Aktif mentor ağı</div></div>
+      <div class="tabpanel" data-p="2"><div><h4>Verisi olan büyür</h4><p>Talep ve finansman uygunsa ortak kullanım atölyesi/merkez; programların diğer ilçelere aktarılması. Yalnızca doluluk, gelir, ortaklık ve etki verileri yeterliyse.</p></div><div class="ok">▸ Gelir çeşitliliği<br>▸ Tekrarlanan müşteri/ortaklık<br>▸ Bağımsız etki raporu<br>▸ Sürdürülebilir ekip</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 SİZ ============ -->
+<section id="siz" class="siz dark" data-st="siz" aria-labelledby="z-h">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="kicker">06 / Siz</div>
+      <h2 id="z-h">Sinyali <em>birlikte</em> güçlendirelim.</h2>
+      <p class="lead">Bu sinyali taşıyan kurucu ekibimiz bir araya geldi; şimdi sıra, onu daha uzağa taşıyacak dostlarda.</p>
+    </div>
+
+    <div class="team" id="team">
+      <article class="person rv"><div class="av" style="--r0:0deg">EB</div><h4>Emirhan BEKTEŞ</h4><p>Akıllı Şehirler ve Ulaşım Teknolojisi Uzmanı · Proje / GIS / teknoloji koordinasyonu</p></article>
+      <article class="person rv" style="--d:1"><div class="av" style="--r0:60deg">EB</div><h4>Elif BEKTEŞ</h4><p>Dene-Yap Atölyesi mentörü · Elektrik-elektronik / STEM</p></article>
+      <article class="person rv" style="--d:2"><div class="av" style="--r0:120deg">NA</div><h4>Nuh ARGIN</h4><p>İzcilik sertifikalı eğitimci · Çocuk ve gençlik programları</p></article>
+      <article class="person rv" style="--d:3"><div class="av" style="--r0:180deg">RT</div><h4>Rıza TAMUR</h4><p>Lazer kesim, 3D yazıcı, reklam ve afiş baskı uzmanı</p></article>
+      <article class="person rv"><div class="av" style="--r0:240deg">KK</div><h4>Kadir KURT</h4><p>Muhasebe / finans · Bütçe ve mali disiplin</p></article>
+      <article class="person rv" style="--d:1"><div class="av" style="--r0:300deg">ES</div><h4>Engin SÖNMEZ</h4><p>Sensör teknik destek uzmanı · Yerel ekonomi ve sponsorluk</p></article>
+      <article class="person rv" style="--d:2"><div class="av" style="--r0:30deg">İG</div><h4>İsmail GÜLER</h4><p>Hukuk / idari süreçler · Sözleşme ve yönetişim</p></article>
+      <article class="person rv" style="--d:3" id="joinCard"><div class="av" style="background:var(--lime)">+</div><h4>Sıradaki sen ol</h4><p>Mentor, gönüllü, öğretmen, üretici, mühendis… Ağa katıl.</p></article>
+    </div>
+
+    <div class="ways">
+      <article class="way rv" style="--c:#ee8a0b">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></div>
+        <h3>Üye ol & bağış yap</h3><p>Aidat ve bağışlar derneğin taban gelirini oluşturur; bir sensör düğümü, bir çocuğun ilk lehimi olur.</p><div class="ex">Bireysel · hemşehri · mezun ağı</div>
+      </article>
+      <article class="way rv" style="--c:#2f80c8;--d:1">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10l8-6 8 6v10M9 20v-6h6v6"/></svg></div>
+        <h3>Sponsor ol</h3><p>Yıllık teknoloji/eğitim sponsorluğu veya belirli bir programın sponsorluğu. Ekipman karşılığı ayni destek de kabul.</p><div class="ex">Teknoloji firmaları · bankalar · yerel işletmeler</div>
+      </article>
+      <article class="way rv" style="--c:#4a9d3b;--d:2">
+        <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg></div>
+        <h3>Mentor / gönüllü ol</h3><p>Bir cumartesi, bir atölye, bir saha günü. Alan uzmanlığınız, çocukların hayatında iz bırakır.</p><div class="ex">Yazılım · elektronik · GIS · tarım · eğitim</div>
+      </article>
+      <article class="way rv" style="--c:#1f8a8a">
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <h3>Ekipman ver</h3><p>Kullanmadığınız bilgisayar, sensör, Raspberry Pi, 3D yazıcı veya internet altyapısı burada ikinci hayatına kavuşur.</p><div class="ex">Ayni destek kayıt altına alınır</div>
+      </article>
+      <article class="way rv" style="--c:#7a54c9;--d:1">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 12h5l2-6 3 12 2-6h4"/></svg></div>
+        <h3>Kurumsal atölye al</h3><p>GIS/veri analizi, dijitalleşme, teknik eğitim ve prototip geliştirme hizmetleri; kapsamı ve teslimatı yazılı.</p><div class="ex">Şirket · belediye · kooperatif</div>
+      </article>
+      <article class="way rv" style="--c:#d1491f;--d:2">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></div>
+        <h3>Proje ortağı ol</h3><p>Kamu, yerel ve uluslararası hibe çağrılarında ortak başvuru; tarım, çevre, enerji, kırsal turizm ve kültürel miras.</p><div class="ex">Üniversite · okul · STK</div>
+      </article>
+    </div>
+
+    <div class="needs rv">
+      <h3>İhtiyaç panosu</h3>
+      <div class="need"><span class="i">01</span><b>Kuruluş, muhasebe ve hukuki kontrol</b><span>Tüzük, kuruluş evrakı, mali müşavir, sözleşme, temel idari giderler</span><em>kurucu katkısı / başlangıç bağışı</em></div>
+      <div class="need"><span class="i">02</span><b>Mekân ve temel altyapı</b><span>Elektrik, internet, güvenlik, mobilya, yangın ve çocuk güvenliği gereklilikleri</span><em>belediye ayni desteği / sponsor</em></div>
+      <div class="need"><span class="i">03</span><b>Eğitim ve prototipleme ekipmanı</b><span>Bilgisayar, mikrodenetleyici, sensör, el aleti, gerektiğinde 3D yazıcı</span><em>ekipman sponsoru / proje</em></div>
+      <div class="need"><span class="i">04</span><b>Dijital altyapı</b><span>Web sitesi, kayıt sistemi, sunucu, lisans ve veri güvenliği</span><em>ayni teknoloji desteği</em></div>
+      <div class="need"><span class="i">05</span><b>Program ve uzman giderleri</b><span>Eğitmen, mentor, saha ulaşımı, sarf malzemesi, etkinlik</span><em>program sponsoru / proje</em></div>
+      <div class="need"><span class="i">06</span><b>İşletme sermayesi</b><span>Sabit giderler ve gelir gecikmeleri için nakit rezerv</span><em>taahhütlü bağış</em></div>
+    </div>
+
+    <div class="pledge">
+      <div class="pl-a rv">
+        <h3>Şeffaflık sözü</h3>
+        <p>Amacımız kâr dağıtmak değil. Gelirlerin önemli kısmı; eğitim ekipmanı, uzman hizmeti, internet/sunucu, bakım, yeni sensörler ve öğrenci projelerine geri döner. Ticari faaliyetler dernekten ayrı bir iktisadi işletme ve ayrı muhasebe düzeniyle yürütülür; her yıl faaliyet ve etki raporu yayımlanır.</p>
+      </div>
+      <div class="pl-b rv" style="--d:1" id="contactCard">
+        <h3>Bize ulaşın</h3>
+        <div id="contactBody"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <img src="assets/logo.webp" alt="ORKÜTEK logosu" width="110" height="100">
+      <div>
+        <strong>Orhan İli Kültür, Teknoloji, Yardımlaşma ve Dayanışma Derneği</strong>
+        Kısa adı ORKÜTEK · Merkez: Orhaneli / Bursa · Doğa · Teknoloji · Eğitim · Dayanışma
+      </div>
+    </div>
+    <p class="fine">Dernek kuruluş sürecindedir. Bu sitedeki programlar, hedefler ve rakamlar 30 Eylül 2026 tarihli ön fizibilite ve ekosistem gelişim dosyasındaki planlama hedefleridir; resmî bir taahhüt veya teklif niteliği taşımaz. Tarla simülasyonu eğitim amaçlı örnektir, gerçek ölçüm içermez. © <span id="yr">2026</span> ORKÜTEK.</p>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
